@@ -1,10 +1,14 @@
-package edu.marcos.methods;
+package edu.marcos.terminalandarguments;
+
+import java.util.Scanner;
+import java.util.Locale;
 
 public class Usuario {
 
     public static void main(String[] args) {
 
         SmartTv smartTv = new SmartTv();
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 
         smartTv.ligar();
 
@@ -17,15 +21,16 @@ public class Usuario {
 
         smartTv.mudarCanal(5);
 
-        String nomeTV = args [0];
+        System.out.println("Enter the TV name: ");
+        String nomeTV = scanner.next();
 
         showInfo(smartTv, nomeTV);
 
     }
 
-    private static void showInfo( SmartTv tv, String nomeTV) {
+    private static void showInfo(SmartTv tv, String nomeTV) {
 
-        System.out.println("--------------------------------");
+        System.out.println("\n--------------------------------");
         System.out.println("The TV name is: " + nomeTV);
         System.out.println("The TV is on? " + tv.ligada);
         System.out.println("The volume is: " + tv.volume);

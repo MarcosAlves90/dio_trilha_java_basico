@@ -1,4 +1,4 @@
-package edu.marcos.methods;
+package edu.marcos.terminalandarguments;
 
 public class SmartTv {
 
